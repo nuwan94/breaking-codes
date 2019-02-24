@@ -46,6 +46,11 @@ h6 {
   color: #0e1b4d;
 }
 
+.disabled {
+  touch-action: none;
+  pointer-events: none;
+}
+
 .main-page {
   margin-top: 70px;
 }
@@ -158,13 +163,14 @@ h6 {
 #header.header-scrolled,
 #header.header-fixed {
   background: rgba(6, 12, 34, 0.98);
-  height: 120px;
+  height: 100px;
   padding: 15px 0;
   transition: all 0.5s;
 }
+
 #header.header-scrolled #nav-menu-container,
-#header.header-fixed #nav-menu-container{
-  margin-top: 25px;
+#header.header-fixed #nav-menu-container {
+  margin-top: 15px;
 }
 
 #header #logo h1 {
@@ -190,7 +196,7 @@ h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 100px;
+  max-height: 75px;
 }
 
 /*--------------------------------------------------------------
@@ -219,12 +225,12 @@ h6 {
   white-space: nowrap;
 }
 
-.nav-menu > li {
+.nav-menu>li {
   float: left;
 }
 
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
+.nav-menu li:hover>ul,
+.nav-menu li.sfHover>ul {
   display: block;
 }
 
@@ -284,11 +290,11 @@ h6 {
   color: #fff;
 }
 
-.nav-menu > li {
+.nav-menu>li {
   margin-left: 8px;
 }
 
-.nav-menu > li > a:before {
+.nav-menu>li>a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -300,9 +306,9 @@ h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
+/* .nav-menu .menu-active > a:before */
 .nav-menu a:hover:before,
-.nav-menu li:hover > a:before,
-.nav-menu .menu-active > a:before {
+.nav-menu li:hover>a:before {
   visibility: visible;
   width: 100%;
 }
@@ -352,7 +358,7 @@ h6 {
   border-radius: 3px;
 }
 
-.nav-menu ul li:hover > a {
+.nav-menu ul li:hover>a {
   background: #23c212;
   color: #fff;
 }
@@ -524,7 +530,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-#intro h1 span,  #intro p  span {
+#intro h1 span,
+#intro p span {
   color: #23c212;
 }
 
@@ -719,7 +726,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
-#members .member-photo{
+#members .member-photo {
   overflow: hidden;
 }
 
@@ -757,11 +764,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 5px
 }
 
-#members .member .details a i{
+#members .member .details a i {
   font-size: 1.5em
 }
 
-#members .member img{
+#members .member img {
   transition: .5s;
   -o-transition: .5s;
   -webkit-transition: .5s;
@@ -823,6 +830,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule {
   padding: 60px 0 60px 0;
+  background: #eee;
 }
 
 #schedule .nav-tabs {
@@ -886,7 +894,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 100%;
   width: 70px;
   line-height: 70px;
-  color: #0b1126;;
+  color: #0b1126;
+  ;
   font-weight: bold;
 
 }
@@ -912,6 +921,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
+  line-height: inherit;
+}
+
+#schedule .schedule-item h5 {
   line-height: inherit;
 }
 
@@ -1257,7 +1270,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #buy-tickets .card {
   border: none;
   border-radius: 5px;
-  transition: all  0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
 }
 
@@ -1587,6 +1600,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 768px) {
+
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
@@ -1598,7 +1612,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-right: 1px solid #ddd;
   }
 
-  #schedule .schedule-item{
+  #schedule .schedule-item {
     line-height: 100px;
   }
 }
@@ -1686,7 +1700,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 8px 50px;
   }
 
+  #header #logo img {
+    max-height: 50px;
+  }
 
+  #header.header-scrolled,
+  #header.header-fixed {
+    height: 75px;
+  }
 }
 
 @media (max-width: 574px) {
