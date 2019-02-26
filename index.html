@@ -39,6 +39,29 @@
 
 <body>
 
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="402522796982788" theme_color="#13cf13"
+    logged_in_greeting="Interested in Breaking Codes?" logged_out_greeting="Interested in Breaking Codes?">
+  </div>
+
   <!--==========================
     Header
   ============================-->
@@ -346,18 +369,18 @@
             </div>
 
             <div class="row schedule-item">
-                <div class="col-sm-2">
-                  <div class="member">
-                    <img src="img/winners/ano.png" alt="Brenden Legros">
-                  </div>
-                </div>
-                <div class="col-sm-8">
-                  <h4>Tharindu Bandara</h4>
-                </div>
-                <div class="col-sm-2">
-                  <h5>50.45%</h5>
+              <div class="col-sm-2">
+                <div class="member">
+                  <img src="img/winners/ano.png" alt="Brenden Legros">
                 </div>
               </div>
+              <div class="col-sm-8">
+                <h4>Tharindu Bandara</h4>
+              </div>
+              <div class="col-sm-2">
+                <h5>50.45%</h5>
+              </div>
+            </div>
 
           </div>
           <!-- End Past Content 1 -->
