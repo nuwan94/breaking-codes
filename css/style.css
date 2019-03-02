@@ -141,6 +141,13 @@ h6 {
   color: #9195a2;
 }
 
+.section-header h2 span {
+  display: block;
+  font-size: .7em;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
 .section-with-bg {
   background-color: #f6f7fd;
 }
@@ -830,7 +837,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule {
   padding: 60px 0 60px 0;
-  background: #eee;
+  /* background: #eee; */
 }
 
 #schedule .nav-tabs {
@@ -1162,16 +1169,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0;
 }
 
-#faq #faq-list {
+#faq-list {
   padding: 0;
   list-style: none;
 }
 
-#faq #faq-list li {
+#faq-list li {
   border-bottom: 1px solid #ddd;
 }
 
-#faq #faq-list a {
+#faq-list a {
   padding: 18px 0;
   display: block;
   position: relative;
@@ -1182,26 +1189,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-right: 20px;
 }
 
-#faq #faq-list i {
+#faq-list i {
   font-size: 24px;
   position: absolute;
   right: 0;
   top: 16px;
 }
 
-#faq #faq-list p {
+#faq-list p {
   margin-bottom: 20px;
 }
 
-#faq #faq-list a.collapse {
+#faq-list a.collapse {
   color: #23c212;
 }
 
-#faq #faq-list a.collapsed {
+#faq-list a.collapsed {
   color: #000;
 }
 
-#faq #faq-list a.collapsed i::before {
+#faq-list a.collapsed i::before {
   content: "\f055" !important;
 }
 
