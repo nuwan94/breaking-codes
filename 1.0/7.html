@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Breaking Codes 1.0 - Pascal's Triangle Generator</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../fav.png" rel="icon">
+  <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link href="../lib/animate/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="../css/prism-line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/toolbar/prism-toolbar.min.css" />
+  <link href="../lib/venobox/venobox.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/questions.css">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" class="header-fixed">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="../index.html"><img src="../img/logo.png" alt="" title=""></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#question">Question</a></li>
+          <li><a href="#solution">Solutions</a></li>
+          <li><a href="#explanation">Explanation</a></li>
+          <li><a href="#submissions">Best Answers</a></li>
+          <li class="buy-tickets"><a href="index.html"><i class="fa fa-caret-left"></i> 1.0</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-page">
+
+    <!--==========================
+      Speaker Details Section
+    ============================-->
+    <section id="members-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pascal's Triangle Generator</h2>
+        </div>
+
+        <div class="row" id="question">
+          <h2 class="mt-3">Question</h2>
+          <div class="col-md-12 mtb-3">
+            <p>Given a non-negative integer \(n\), generate the first \(n\) rows of Pascal's triangle.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif"/><br><br>
+            <p>Each number is the sum of the two numbers above it in Pascal's triangle.</p>
+            <h5>Sample Scenario 1</h5>
+
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Input Format</h6>
+                <pre class="lang-markdown"><code>5</code></pre>
+              </div>
+              <div class="col-md-6">
+                <h6>Output Format</h6>
+                <pre class="lang-markdown"><code>    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1</code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row" id="solution">
+          <h2 class="mt-3">Solution</h2>
+          <div class="col-md-12 container" id="schedule">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active python" href="#py" role="tab" data-toggle="tab"> <i class="devicon-python-plain-wordmark"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link c" href="#c" role="tab" data-toggle="tab"> <i class="devicon-c-plain-wordmark"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link java" href="#java" role="tab" data-toggle="tab"> <i class="devicon-java-plain-wordmark"></i></a>
+              </li>
+            </ul>
+
+
+            <div class="tab-content row" class="wow fadeInDown">
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade show active line-numbers" id="py">
+                <pre><code class="language-python">n = int(input())
+
+Pascal = []
+
+for i in range(n):
+    row = [1] * (i+1)
+    Pascal.append(row)
+
+for j in range(2, n):
+    for k in range(1, j):
+        Pascal[j][k] = Pascal[j-1][k-1] + Pascal[j-1][k]
+
+for i in range(n):
+    print(((n - i - 1) * " "), end='')
+    print(*Pascal[i])</code></pre>
+
+              </div>
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade line-numbers" id="c">
+                <pre><code class="language-c">#include &lt;stdio.h>
+#include &lt;string.h>
+#include &lt;math.h>
+#include &lt;stdlib.h>
+
+int main(){
+
+    int a;
+    scanf("%d", &a);
+    int j = a;
+    int k;
+	
+    for (int i = 0; i < a; i++){
+	
+        for (int p = a; p > i + 1; p--)
+            printf(" ");
+        
+        k = 1;
+        for (int j = 0; j <= i; j++){
+            printf("%d ", k);
+            k = k * (i - j) / (j + 1);
+        }
+        printf("\n");
+    }
+	
+    return 0;
+}</code></pre>
+              </div>
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade line-numbers" id="java">
+                <pre><code class="language-java">import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static int pascal(int i, int j) {
+        if ((j == 0) || (j == i))
+            return 1;
+        else
+            return pascal(i - 1, j - 1) + pascal(i - 1, j);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++)
+                print(" ");
+
+            for (int j = 0; j <= i; j++)
+                print(pascal(i, j) + ((j == i) ? "" : " "));
+
+            print("\n");
+        }
+
+    }
+
+    public static void print(String msg) {
+        System.out.print(msg);
+    }
+}</code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row" id="explanation">
+          <h2 class="mt-3">Explanation</h2>
+          <div class="col-md-12 mtb-3">
+            <p>
+              This is a simple problem if you know how to use ASCII values in any programming language.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="submissions">
+          <h2 class="mt-3">Best Answers</h2>
+          <div class="col-md-12 container" id="schedule">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active python" href="#best-c" role="tab" data-toggle="tab"><i class="devicon-c-plain-wordmark"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link java" href="#best-java" role="tab" data-toggle="tab"><i class="devicon-java-plain-wordmark"></i></a>
+              </li>
+            </ul>
+
+
+            <div class="tab-content row" class="wow fadeInDown">
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade show active line-numbers" id="best-c">
+                <a class="author" href="#submissions">Dinidu Sandaruwan</a>
+                <pre><code class="language-c">#include &lt;stdio.h>
+#include &lt;string.h>
+#include &lt;math.h>
+#include &lt;stdlib.h>
+
+int main() {
+
+    int a;
+    scanf("%d",&a);
+    int j=a;
+    int k;
+    for(int i=0; i&lt;a; i++){
+        for(int p=a; p>i+1;p--){
+            printf(" ");
+        }
+        k = 1;
+        for(int j=0;j<=i;j++){
+              printf("%d ",k);
+              k = k * (i - j) / (j + 1);
+        }
+        printf("\n");
+        
+    }
+    return 0;
+}</code></pre>
+
+              </div>
+
+              <div role="tabpanel" class="col-sm-12  tab-pane fade line-numbers" id="best-java">
+                <a class="author" href="#submissions">Janaka Pradeep</a>
+                <pre><code class="lang-java">import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String args[]){
+        int r, i, k, number=1, j;
+        Scanner scan = new Scanner(System.in);
+        
+        r = scan.nextInt();
+        
+        for(i=0;i&lt;r;i++){
+            for(k=r-1; k>i; k--){
+                System.out.print(" ");
+            }
+            number = 1;
+            for(j=0;j<=i;j++){
+                 System.out.print(number+ " ");
+                 number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}</code></pre>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Breaking Codes by SESA</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/superfish/hoverIntent.js"></script>
+  <script src="../lib/superfish/superfish.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
+  <script src="../js/prism-line-numbers.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/venobox/venobox.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="../js/main.js"></script>
+
+
+</body>
+
+</html>

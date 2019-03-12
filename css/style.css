@@ -9,6 +9,11 @@
 # General
 --------------------------------------------------------------*/
 
+*{
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
 body {
   background: #fff;
   color: #2f3138;
@@ -23,7 +28,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f8234a;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
@@ -77,7 +82,7 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #23c212;
+  background: #0b1126;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -94,13 +99,13 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: #e0072f;
+  background: #23c212;
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #e0072f;
+  background: #23c212;
   color: #fff;
 }
 
@@ -206,6 +211,10 @@ h6 {
   max-height: 75px;
 }
 
+#header .pull-left{
+  float:left;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -292,7 +301,7 @@ h6 {
   outline: none;
 }
 
-.nav-menu .menu-active a,
+/* .nav-menu .menu-active a, */
 .nav-menu a:hover {
   color: #fff;
 }
@@ -678,7 +687,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #about {
-  background: url("../img/about-bg.jpg");
+  background: url("../img/bg.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -688,7 +697,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgba(6, 12, 34, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -700,7 +709,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
+  color: #23c212;
   text-align: center
 }
 
@@ -713,7 +722,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about p {
-  font-size: 14px;
+  /* font-size: 14px; */
   margin-bottom: 20px;
   color: #fff;
   text-align: justify;
@@ -735,6 +744,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #members .member-photo {
   overflow: hidden;
+  text-align: center;
+  /* background: #23c212; */
 }
 
 #members .member .details {
@@ -790,7 +801,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #members-details {
-  padding: 60px 0;
+  padding: 60px 10px;
 }
 
 #members-details .details h2 {
@@ -804,7 +815,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 15px;
 }
 
-#members-details .details .social a {
+/* #members-details .details .social a {
   background: #e9edfb;
   color: #112363;
   line-height: 1;
@@ -814,16 +825,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 36px;
   height: 36px;
   padding-top: 9px;
-}
+} */
 
-#members-details .details .social a:hover {
+/* #members-details .details .social a:hover {
   background: #23c212;
   color: #fff;
-}
+} */
 
-#members-details .details .social a i {
+/* #members-details .details .social a i {
   font-size: 18px;
-}
+} */
 
 #members-details .details p {
   color: #112363;
@@ -836,7 +847,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #schedule {
-  padding: 60px 0 60px 0;
+  padding: 20px 0 20px 0;
   /* background: #eee; */
 }
 
@@ -1187,6 +1198,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
   font-weight: 600;
   padding-right: 20px;
+  color: #0e1b4d;
 }
 
 #faq-list i {
@@ -1297,7 +1309,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #buy-tickets .card .card-price {
-  font-size: 48px;
+  font-size: 2em;
   margin: 0;
 }
 
@@ -1307,6 +1319,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #buy-tickets .card .text-muted {
   opacity: 0.7;
+}
+
+#buy-tickets .disabled{
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 
 #buy-tickets .card .btn {
@@ -1320,7 +1337,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #buy-tickets .card .btn:hover {
-  background-color: #e0072f;
+  background-color: #101522;
 }
 
 #buy-tickets #buy-ticket-modal input,
@@ -1478,6 +1495,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-info img {
   width: 70%;
+  max-width: 120px;
   margin-bottom: 10px;
 }
 
@@ -1733,4 +1751,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   #subscribe button {
     margin-top: 10px;
   }
+}
+
+
+/* for block of numbers */
+.hljs-ln td.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  border-right: 1px solid #CCC;
+  vertical-align: top;
+  padding-right: 5px;
+
+  /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln td.hljs-ln-code {
+  padding-left: 10px;
 }

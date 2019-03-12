@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Breaking Codes 1.0 - Capitalization Rule</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../fav.png" rel="icon">
+  <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link href="../lib/animate/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="../css/prism-line.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/toolbar/prism-toolbar.min.css" />
+  <link href="../lib/venobox/venobox.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/questions.css">
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" class="header-fixed">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="../index.html"><img src="../img/logo.png" alt="" title=""></a>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#question">Question</a></li>
+          <li><a href="#solution">Solutions</a></li>
+          <li><a href="#explanation">Explanation</a></li>
+          <li><a href="#submissions">Best Answers</a></li>
+          <li class="buy-tickets"><a href="index.html"><i class="fa fa-caret-left"></i> 1.0</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-page">
+
+    <!--==========================
+      Speaker Details Section
+    ============================-->
+    <section id="members-details" class="wow fadeIn">
+      <div class="container">
+        <div class="section-header">
+          <h2>Capitalization Rule</h2>
+        </div>
+
+        <div class="row" id="question">
+          <h2 class="mt-3">Question</h2>
+          <div class="col-md-12 mtb-3">
+            <p>
+              Given a word, you need to check whether the usage of capital letters in it is valid or not.
+            </p>
+
+            <h4>Major Capitalization Rules to Check</h4>
+
+            <ul>
+              <li>Rule #1 - All Upper <ul>
+                  <li>
+                    Word is valid if all letters in word are capitals, like "UOK".
+                  </li>
+                </ul>
+                <br>
+              </li>
+              <li>Rule #2 - All Lower <ul>
+                  <li> Word is valid if all letters are non capitals, like "breakingcodes".
+                  </li>
+                </ul>
+                <br>
+              </li>
+              <li>Rule #3 - First Letter Upper <ul>
+                  <li>Otherwise word is valid only first letter in word is capital if there is more than one letter,
+                    like
+                    "Google".</li>
+                </ul>
+                <br>
+              </li>
+            </ul>
+
+            <h5>Sample Scenario 1</h5>
+
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Input Format</h6>
+                <pre class="lang-markdown"><code>UOKSE</code></pre>
+              </div>
+              <div class="col-md-6">
+                <h6>Output Format</h6>
+                <pre class="lang-markdown"><code>VALID</code></pre>
+              </div>
+            </div>
+            <br>
+            <h5>Sample Scenario 2</h5>
+
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Input Format</h6>
+                <pre class="lang-markdown"><code>Hello</code></pre>
+              </div>
+              <div class="col-md-6">
+                <h6>Output Format</h6>
+                <pre class="lang-markdown"><code>VALID</code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row" id="solution">
+          <h2 class="mt-3">Solution</h2>
+          <div class="col-md-12 container" id="schedule">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active python" href="#py" role="tab" data-toggle="tab"> <i class="devicon-python-plain-wordmark"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link c" href="#c" role="tab" data-toggle="tab"> <i class="devicon-c-plain-wordmark"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link java" href="#java" role="tab" data-toggle="tab"> <i class="devicon-java-plain-wordmark"></i></a>
+              </li>
+            </ul>
+
+
+            <div class="tab-content row" class="wow fadeInDown">
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade show active line-numbers" id="py">
+                <pre><code class="language-python">word = input()
+
+if len(word) > 1:
+    print("VALID" if word.isupper() or word.islower()
+          or word.istitle() else "NOT VALID")
+else:
+    print("VALID" if word.islower() else "NOT VALID")</code></pre>
+
+              </div>
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade line-numbers" id="c">
+                <pre><code class="language-c">#include &lt;stdio.h>
+#include &lt;string.h>
+#include &lt;math.h>
+#include &lt;stdlib.h>
+#include &lt;stdbool.h>
+
+int main(){
+
+    char word[256];
+    scanf("%s", word);
+
+    bool isUpperCase = true;
+    bool isLowerCase = true;
+    bool isTitleCase = true;
+
+    int len = strlen(word);
+    
+    int i;
+    for (i = 0; i < len; i++){
+        char c = word[i];
+
+        if (c < 'a' || c > 'z')
+            isLowerCase = false;
+        
+        if (c < 'A' || c > 'Z')
+            isUpperCase = false;
+        
+        if (i > 0 && (c > 'A' && c < 'Z'))
+            isTitleCase = false;
+    }
+
+    if (len > 1)
+        printf((isUpperCase || isLowerCase || isTitleCase) ? "VALID" : "NOT VALID");
+    else
+        printf((isLowerCase) ? "VALID" : "NOT VALID");
+
+    return 0;
+}
+</code></pre>
+              </div>
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade line-numbers" id="java">
+                <pre><code class="language-java">import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String word = input.next();
+
+        if (word.length() > 1) {
+            print((isUpper(word) || isLower(word) || isTitle(word)) ? "VALID" : "NOT VALID");
+        } else {
+            print(isLower(word) ? "VALID" : "NOT VALID");
+        }
+    }
+
+    public static boolean isLower(String s) {
+        return s == s.toLowerCase();
+    }
+
+    public static boolean isUpper(String s) {
+        return s == s.toUpperCase();
+    }
+
+    public static boolean isTitle(String s) {
+        char firstLetter = s.charAt(0);
+        String restOfS = s.substring(1, s.length());
+        return Character.isUpperCase(firstLetter) && isLower(restOfS);
+    }
+
+    public static void print(String msg) {
+        System.out.print(msg);
+    }
+}
+                    </code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row" id="explanation">
+          <h2 class="mt-3">Explanation</h2>
+          <div class="col-md-12 mtb-3">
+            <p>
+              This is a simple problem if you know how to use ASCII values in any programming language.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="submissions">
+          <h2 class="mt-3">Best Answers</h2>
+          <div class="col-md-12 container" id="schedule">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active python" href="#best-py" role="tab" data-toggle="tab"><i class="devicon-python-plain-wordmark"></i></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link java" href="#best-java" role="tab" data-toggle="tab"><i class="devicon-java-plain-wordmark"></i></a>
+              </li> -->
+            </ul>
+
+
+            <div class="tab-content row" class="wow fadeInDown">
+
+              <div role="tabpanel" class="col-sm-12 tab-pane fade show active line-numbers" id="best-py">
+                <a class="author" href="#submissions">Janaka Pradeep</a>
+                <pre><code class="language-python">string = input("") 
+n = len(string)
+
+if(n != 1):
+    if(string.isupper()):
+        print("VALID")
+    elif(string.islower()):
+        print("VALID")
+    elif(string == string.capitalize() ):
+        print("VALID")
+    else:
+        print("NOT VALID")
+else:
+    if(string.islower()):
+        print("VALID")
+    else:
+        print("NOT VALID")</code></pre>
+
+              </div>
+
+              <!-- <div role="tabpanel" class="col-sm-12  tab-pane fade line-numbers" id="best-java">
+                <a class="author" href="#submissions">Udith Shalinda</a>
+                <pre><code class="lang-java">import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int rounds= scan.nextInt();
+        for(int i=0;i&lt;rounds;i++){
+            decode(scan.next());
+        }
+    }
+
+    static void decode(String str){
+        char []arr = str.toCharArray();
+        
+        for(int i=0;i&lt;arr.length;i++){
+            String number = Character.toString(arr[i])+Character.toString(arr[i+1]);
+            int num = 123-Integer.parseInt(number);
+            i++;
+            System.out.print((char)num);
+        }
+        System.out.println();
+    }
+
+}
+                      </code></pre>
+              </div> -->
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Breaking Codes by SESA</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/superfish/hoverIntent.js"></script>
+  <script src="../lib/superfish/superfish.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
+  <script src="../js/prism-line-numbers.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/venobox/venobox.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="../js/main.js"></script>
+
+
+</body>
+
+</html>

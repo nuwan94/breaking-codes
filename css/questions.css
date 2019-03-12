@@ -1,0 +1,88 @@
+#question p {
+  text-align: justify;
+}
+
+#question i {
+  font-size: 1.25em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: .1em;
+}
+
+#schedule .nav-tabs {
+  text-align: left;
+}
+
+#schedule .nav-tabs a,
+#schedule .nav-tabs a.active {
+  background: none;
+  color: #fff;
+  font-size: 3em;
+  padding: 0px 20px;
+  border-radius: 0;
+  position: relative;
+}
+
+#schedule .nav-tabs a.active.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0;
+  height: 0;
+  border-top: solid 10px transparent;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+
+#schedule .nav-tabs .nav-link.java {
+  background: #EA2D2E;
+}
+
+#schedule .nav-tabs a.active.nav-link.java::after {
+  border-top-color: #EA2D2E;
+}
+
+#schedule .nav-tabs .nav-link.python {
+  background: #3975a5;
+}
+
+#schedule .nav-tabs a.active.nav-link.python::after {
+  border-top-color: #3975a5;
+}
+
+#schedule .nav-tabs .nav-link.c {
+  background: #642076;
+}
+
+#schedule .nav-tabs a.active.nav-link.c::after {
+  border-top-color: #642076;
+}
+
+#schedule .tab-pane a.author:hover {
+  color: #23c212;
+}
+
+#schedule .tab-pane a.author {
+  color: #fff;
+  background: #272822;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin-bottom: -10px;
+  text-align: center;
+  border-bottom: 5px solid #999;
+}
+
+pre[class*="language-"]{
+  border-radius: 0;
+}
+
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+  background: none;
+}

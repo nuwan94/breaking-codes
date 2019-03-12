@@ -1,0 +1,22 @@
+#problems .btn{
+    margin: 10px;
+    background: #0b1126;
+    color: #fff;
+}
+
+#problems .btn:hover{
+    background: #23c212;
+}
+
+#winners .member .details{
+    background: #fff;
+    color: #0b1126;
+}
+
+#winners .member .details a, #winners .member .details p{
+    color: #0b1126;
+}
+
+#winners .member:hover img{
+    transform: none;
+}
